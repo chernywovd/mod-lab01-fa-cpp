@@ -89,8 +89,8 @@ unsigned int faStr2(const char *str) {
 }
 
 unsigned int faStr3(const char *str) {
-   //Игорь Чернышов. Переменная для
-   //подсчета количества слов
+    //Игорь Чернышов. Переменная для
+    //подсчета количества слов
     unsigned int CountOfWords = 0;
 
     // Переменная для подсчета длины предложения
@@ -134,7 +134,7 @@ unsigned int faStr3(const char *str) {
     if (CountOfWords > 0) {
         // Средняя длина слова равна длине
         //предложения, деленной на количество слов
-        average = static_cast<float>(LengthOfSentense) 
+        average = static_cast<float>(LengthOfSentense)
         / static_cast<float>(CountOfWords);
     } else {
         // Если количество слов равно нулю
