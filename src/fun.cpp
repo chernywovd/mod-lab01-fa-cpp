@@ -7,7 +7,8 @@ unsigned int faStr1(const char *str) {
     bool ContainsLetter = false;
     while (*str != '\0') {
         //Чернышов И. идем по строка пока не дойдем до ее конца
-        if (std::isalpha(static_cast<unsigned char>(*str))) { // Функция isalpha проверяет аргумент,
+        if (std::isalpha(static_cast<unsigned char>(*str))) {
+            // Функция isalpha проверяет аргумент,
             //передаваемый через параметр сharacter,
             //является ли он строчной или прописной буквой алфавита
             if (!ContainsLetter) {
