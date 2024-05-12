@@ -70,14 +70,13 @@ unsigned int faStr2(const char *str) {
         // то если слово имеет первую заглавную латинскую букву,
         // то увеличиваем счетчик таких слов
         // и снимаем признаки слова с первой
-        //заглавной латинской буквой и начала слова            
+        //заглавной латинской буквой и начала слова
             if (isWordWithFirstCapitalLatinLetter) {
                 NumberOfWordsWithFirstCapitalLatinLetter++;
             }
             isWordWithFirstCapitalLatinLetter = false;
             isBeginOfWord = true;
-        }        
-        else {
+        } else {
         // В противном случае снимаем признаки слова
         //с первой заглавной латинской буквой и начала слова
             isWordWithFirstCapitalLatinLetter = false;
