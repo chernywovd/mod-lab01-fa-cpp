@@ -23,7 +23,8 @@ unsigned int faStr1(const char *str) {
             ContainsDigit = true;
         } else {
             if (ContainsLetter && !ContainsDigit) {
-        //Если слово содержит буквы и не содержит цифры, увеличиваем счетчик
+        //Если слово содержит буквы и 
+        //не содержит цифры, увеличиваем счетчик
                 NumberOfWordsWithoutDigits++;
             }
             ContainsLetter = false;
@@ -48,16 +49,17 @@ unsigned int faStr2(const char *str) {
     bool isWordWithFirstCapitalLatinLetter = false;
     while (*str) {
         // Если начато слово и текущий символ - заглавная латинская буква,
-        // то помечаем слово как имеющее первую заглавную латинскую букву 
+        // то помечаем слово как имеющее первую заглавную латинскую букву
         // и снимаем признак начала слова
         if (isWordStart && std::isupper(static_cast<unsigned char>(*str))) {
             isWordWithFirstCapitalLatinLetter = true;
             isBeginOfWord = false;
-        } 
-        // Если текущий символ - строчная латинская буква,
-        // то если слово не было начато или слово не имеет первую заглавную латинскую букву,
-        // то снимаем признак слова с первой заглавной латинской буквой
+        }
         else if (std::islower(static_cast<unsigned char>(*str))) {
+        // Если текущий символ - строчная латинская буква,
+        // то если слово не было начато или 
+        //слово не имеет первую заглавную латинскую букву,
+        // то снимаем признак слова с первой заглавной латинской буквой
             if (!isBeginOfWord && !isWordWithFirstCapitalLatinLetter) {
                 isWordWithFirstCapitalLatinLetter = false;
             }
