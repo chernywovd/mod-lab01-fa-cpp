@@ -57,20 +57,21 @@ unsigned int faStr2(const char *str) {
             isBeginOfWord = false;
         } else if (std::islower(static_cast<unsigned char>(*str))) {
         // Если текущий символ - строчная латинская буква,
-        // то если слово не было начато или 
+        // то если слово не было начато или
         //слово не имеет первую заглавную латинскую букву,
         // то снимаем признак слова с первой заглавной латинской буквой
             if (!isBeginOfWord && !isWordWithFirstCapitalLatinLetter) {
                 isWordWithFirstCapitalLatinLetter = false;
             }
-        } 
+        }  else if (*(str + 1) == '\0')
+            || std::isspace(static_cast<unsigned char>(*str))
         // Если текущий символ - пробел или конец строки
         // или следующий символ - конец строки,
         // то если слово имеет первую заглавную латинскую букву,
         // то увеличиваем счетчик таких слов
-        // и снимаем признаки слова с первой заглавной латинской буквой и начала слова
-        else if (*(str + 1) == '\0')
-            || std::isspace(static_cast<unsigned char>(*str)) {
+        // и снимаем признаки слова с первой
+        //заглавной латинской буквой и начала слова       
+             {
             if (isWordWithFirstCapitalLatinLetter) {
                 NumberOfWordsWithFirstCapitalLatinLetter++;
             }
