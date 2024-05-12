@@ -89,6 +89,61 @@ unsigned int faStr2(const char *str) {
 }
 
 unsigned int faStr3(const char *str) {
-    return 0;
+   // Игорь Чернышов. Переменная для
+    //подсчета количества слов
+    unsigned int CountOfWords = 0;
+
+    // Переменная для подсчета длины предложения
+    unsigned int LengthOfSentense = 0;
+
+    // Переменная для подсчета длины слова
+    unsigned int LengthOfWord = 0;
+
+    // Цикл по строке
+    while (*str != '\0') {
+        // Если символ является буквой
+        if (std::isalpha(static_cast<unsigned char>(*str))) {
+            // Увеличиваем длину слова
+            LengthOfWord++;
+        }
+        else {
+            // Если длина слова больше нуля
+            if (LengthOfWord > 0) {
+                // Значит, закончилось слово
+                // Увеличиваем количество слов
+                CountOfWords++;
+                // Увеличиваем длину предложения на длину слова
+                LengthOfSentense += LengthOfWord;
+                // Обнуляем длину слова
+                LengthOfWord = 0;
+            }
+        }
+        // Переходим к следующему символу
+        str++;
+    }
+    //  Если длина слова больше нуля
+    if (LengthOfWord > 0) {
+        // Значит, закончилось предложение
+        // Увеличиваем количество слов
+        CountOfWords++;
+        // Увеличиваем длину предложения на длину слова
+        LengthOfSentense += LengthOfWord;
+    }
+    // Подсчитываем среднюю длину слова
+    float average;
+    //  Если количество слов больше нуля
+    if (CountOfWords > 0) {
+        // Средняя длина слова равна длине
+        //предложения, деленной на количество слов
+        average = static_cast<float>(LengthOfSentense) / static_cast<float>(CountOfWords);
+    }
+    else {
+        // Если количество слов равно нулю
+        // Средняя длина слова равна нулю
+        average = 0;
+    }
+    // Возвращаем среднюю длину слова,
+    //округлённую до ближайшего целого
+    return (unsigned int)(average + 0.5);
 }
 //тест2
