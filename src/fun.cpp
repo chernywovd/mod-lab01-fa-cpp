@@ -63,23 +63,23 @@ unsigned int faStr2(const char *str) {
             if (!isBeginOfWord && !isWordWithFirstCapitalLatinLetter) {
                 isWordWithFirstCapitalLatinLetter = false;
             }
-        }  else if ((*(str + 1) == '\0')
-            || std::isspace(static_cast<unsigned char>(*str)))
+        }  else if (std::isspace(static_cast<unsigned char>(*str))
+            || *(str + 1) == '\0')  {
         // Если текущий символ - пробел или конец строки
         // или следующий символ - конец строки,
         // то если слово имеет первую заглавную латинскую букву,
         // то увеличиваем счетчик таких слов
         // и снимаем признаки слова с первой
-        //заглавной латинской буквой и начала слова       
-             {
+        //заглавной латинской буквой и начала слова            
             if (isWordWithFirstCapitalLatinLetter) {
                 NumberOfWordsWithFirstCapitalLatinLetter++;
             }
             isWordWithFirstCapitalLatinLetter = false;
-            isBeginOfWord = true;            
-        } 
-        // В противном случае снимаем признаки слова с первой заглавной латинской буквой и начала слова
+            isBeginOfWord = true;
+        }        
         else {
+        // В противном случае снимаем признаки слова
+        //с первой заглавной латинской буквой и начала слова
             isWordWithFirstCapitalLatinLetter = false;
             isBeginOfWord = false;
         }
