@@ -63,8 +63,8 @@ unsigned int faStr2(const char *str) {
             if (!isBeginOfWord && !isWordWithFirstCapitalLatinLetter) {
                 isWordWithFirstCapitalLatinLetter = false;
             }
-        }  else if (*(str + 1) == '\0')
-            || std::isspace(static_cast<unsigned char>(*str))
+        }  else if ((*(str + 1) == '\0')
+            || std::isspace(static_cast<unsigned char>(*str)))
         // Если текущий символ - пробел или конец строки
         // или следующий символ - конец строки,
         // то если слово имеет первую заглавную латинскую букву,
