@@ -37,4 +37,4 @@ unsigned int faStr2(const char *str) {
 unsigned int faStr3(const char *str) {
     return 0;
 }
-//тест1
+//тест2
