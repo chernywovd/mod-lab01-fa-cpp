@@ -1,5 +1,9 @@
 // Copyright 2022 UNN-IASR
 #include "fun.h"
+#include <iostream>
+#include <cctype>
+#include <cstring>
+#include <cmath>
 
 unsigned int faStr1(const char *str) {
     int NumberOfWordsWithoutDigits = 0;
