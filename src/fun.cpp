@@ -52,7 +52,7 @@ unsigned int faStr2(const char *str) {
         // Если начато слово и текущий символ - заглавная латинская буква,
         // то помечаем слово как имеющее первую заглавную латинскую букву
         // и снимаем признак начала слова
-        if (isWordWithFirstCapitalLatinLetter
+        if (isBeginOfWord
             && std::isupper(static_cast<unsigned char>(*str))) {
             isWordWithFirstCapitalLatinLetter = true;
             isBeginOfWord = false;
