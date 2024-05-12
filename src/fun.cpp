@@ -89,8 +89,8 @@ unsigned int faStr2(const char *str) {
 }
 
 unsigned int faStr3(const char *str) {
-   // Игорь Чернышов. Переменная для
-    //подсчета количества слов
+   //Игорь Чернышов. Переменная для
+   //подсчета количества слов
     unsigned int CountOfWords = 0;
 
     // Переменная для подсчета длины предложения
@@ -105,8 +105,7 @@ unsigned int faStr3(const char *str) {
         if (std::isalpha(static_cast<unsigned char>(*str))) {
             // Увеличиваем длину слова
             LengthOfWord++;
-        }
-        else {
+        } else {
             // Если длина слова больше нуля
             if (LengthOfWord > 0) {
                 // Значит, закончилось слово
@@ -135,9 +134,9 @@ unsigned int faStr3(const char *str) {
     if (CountOfWords > 0) {
         // Средняя длина слова равна длине
         //предложения, деленной на количество слов
-        average = static_cast<float>(LengthOfSentense) / static_cast<float>(CountOfWords);
-    }
-    else {
+        average = static_cast<float>(LengthOfSentense) 
+        / static_cast<float>(CountOfWords);
+    } else {
         // Если количество слов равно нулю
         // Средняя длина слова равна нулю
         average = 0;
