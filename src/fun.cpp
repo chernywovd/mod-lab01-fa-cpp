@@ -23,7 +23,7 @@ unsigned int faStr1(const char *str) {
             ContainsDigit = true;
         } else {
             if (ContainsLetter && !ContainsDigit) {
-        //Если слово содержит буквы и 
+        //Если слово содержит буквы и
         //не содержит цифры, увеличиваем счетчик
                 NumberOfWordsWithoutDigits++;
             }
@@ -33,7 +33,8 @@ unsigned int faStr1(const char *str) {
         str++;
     }
     if (ContainsLetter && !ContainsDigit) {
-    //Если последнее слово содержит буквы и не содержит цифры, увеличиваем счетчик
+    //Если последнее слово содержит буквы
+    //и не содержит цифры, увеличиваем счетчик
         NumberOfWordsWithoutDigits++;
     }
     return NumberOfWordsWithoutDigits;
@@ -54,8 +55,7 @@ unsigned int faStr2(const char *str) {
         if (isWordStart && std::isupper(static_cast<unsigned char>(*str))) {
             isWordWithFirstCapitalLatinLetter = true;
             isBeginOfWord = false;
-        }
-        else if (std::islower(static_cast<unsigned char>(*str))) {
+        } else if (std::islower(static_cast<unsigned char>(*str))) {
         // Если текущий символ - строчная латинская буква,
         // то если слово не было начато или 
         //слово не имеет первую заглавную латинскую букву,
